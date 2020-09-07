@@ -3,3 +3,55 @@ parse_git_branch() {
 }
 
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+# navigation helpers
+alias cd..="cd .."
+alias ...="../../"
+alias ....="../../../"
+alias .....="../../../../"
+
+# alias typos I frequently encounter
+alias dc="cd" #dc is apparently a calculator
+alias cdc="cd"
+
+alias sl="ls"
+alias sls="ls"
+
+#tmux
+alias t='(tmux has-session 2>/dev/null && tmux attach) || (tmux new-session)'
+
+# git helpers
+alias g="git"
+alias gg="git grep"
+
+# tools
+alias grep="grep --color"
+
+#functions 
+
+cd () {
+	builtin cd $1
+	ls -ltr
+}
+
+# We'll see if I ever remember to use this ...
+extract () {
+  if [ -f $1 ] ; then
+      case $1 in
+          *.tar.bz2)   tar xvjf $1    ;;
+          *.tar.gz)    tar xvzf $1    ;;
+          *.bz2)       bunzip2 $1     ;;
+          *.rar)       rar x $1       ;;
+          *.gz)        gunzip $1      ;;
+          *.tar)       tar xvf $1     ;;
+          *.tbz2)      tar xvjf $1    ;;
+          *.tgz)       tar xvzf $1    ;;
+          *.zip)       unzip $1       ;;
+          *.Z)         uncompress $1  ;;
+          *.7z)        7z x $1        ;;
+          *)           echo "don't know how to extract '$1'..." ;;
+      esac
+  else
+      echo "'$1' is not a valid file!"
+  fi
+}
