@@ -5,6 +5,7 @@ filetype plugin on
 
 set ttyfast
 set number
+
 set wildmenu
 
 set expandtab
@@ -27,6 +28,11 @@ set backspace=indent,eol,start
 set autoindent
 
 set noerrorbells
+
+" messing with the path
+set path+=**
+let gitpath=system("git rev-parse --show-toplevel")
+set path+=gitpath
 
 " Uncomment the following to have Vim jump to the last position when                                                       
 " reopening a file
