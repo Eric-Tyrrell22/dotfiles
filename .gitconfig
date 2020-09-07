@@ -1,0 +1,13 @@
+[user]
+	name = Eric tyrrell
+	email = eric.tyrrell@minim.co
+[alias]
+  a = add
+  b = branch
+  d = diff
+  s = status
+  ci = commit
+	co = checkout
+  dc = diff --cached
+  cob = checkout -b
+
