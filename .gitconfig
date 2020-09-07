@@ -5,6 +5,7 @@
   a = add
   b = branch
   d = diff
+  p = push
   s = status
   ci = commit
 	co = checkout
