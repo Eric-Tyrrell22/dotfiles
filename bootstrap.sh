@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 
-ln -sf .vimrc ~
-ln -sf .bash_profile ~
-ln -sf .gitconfig ~
+FILES=".bash_profile .vimrc .gitconfig"
 
-source ~/.bash_profile
+for i in $(echo $FILES| tr ";" "\n")
+do
+  if [ -f ~/dotfiles/system_originals/$i ]; then
+    echo "You might be overwriting the original system files."
+    exit 1
+  fi
+  #save files, just in case
+  cp ~/$i ./system_originals/$i 2> /dev/null
+
+  cp ~/dotfiles/$i ~/$i
+done

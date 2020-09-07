@@ -1,6 +1,8 @@
 set nocompatible
 
 syntax on
+filetype plugin on
+
 set ttyfast
 set number
 set wildmenu
@@ -32,3 +34,21 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
+
+" Plguins
+" Download vim plug if not there already
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'mileszs/ack.vim'
+
+call plug#end()
+
+" mappings
+
+inoremap jj <Esc>
