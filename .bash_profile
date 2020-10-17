@@ -4,6 +4,9 @@ parse_git_branch() {
 
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
+# Apple likes to think they know which shell I prefer
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # navigation helpers
 alias cd..="cd .."
 alias ...="../../"
