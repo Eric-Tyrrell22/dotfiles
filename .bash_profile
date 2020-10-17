@@ -9,9 +9,9 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # navigation helpers
 alias cd..="cd .."
-alias ...="../../"
-alias ....="../../../"
-alias .....="../../../../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
+alias .....="cd ../../../../"
 
 # alias typos I frequently encounter
 alias dc="cd" #dc is apparently a calculator
@@ -26,6 +26,7 @@ alias t='(tmux has-session 2>/dev/null && tmux attach) || (tmux new-session)'
 # git helpers
 alias g="git"
 alias gg="git grep"
+alias gd="cd '$(git rev-parse --show-toplevel)'"
 
 # tools
 alias grep="grep --color"
