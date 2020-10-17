@@ -23,4 +23,7 @@ do
   cp ~/dotfiles/$i ~/$i
 done
 
+# TODO: I don't think this currently works.
+# it might be sourcing the bqash profile for the process running the script
+# Leaving for now because it makes it easier to debug 
 source ~/.bash_profile
