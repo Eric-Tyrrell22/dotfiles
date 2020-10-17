@@ -58,3 +58,5 @@ call plug#end()
 " mappings
 
 inoremap jj <Esc>
+nnoremap ; :
+nnoremap : ;
