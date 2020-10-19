@@ -32,7 +32,7 @@ alias gd="cd '$(git rev-parse --show-toplevel)'"
 # tools
 alias grep="grep --color"
 
-#functions 
+eval "$(rbenv init -)"
 
 cd () {
 	builtin cd $1
