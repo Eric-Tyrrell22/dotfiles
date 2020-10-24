@@ -39,6 +39,12 @@ set path+=gitpath
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
+
+  " autoload template files
+  augroup templates
+    autocmd BufNewFile *.vue 0r ~/.vim/templates/skeleton.vue
+    autocmd BufNewFile *.vue 0r ~/.vim/templates/skeleton.sh
+  augroup end
 endif
 
 " Plguins
