@@ -5,7 +5,7 @@
 
 <script>
 
-export defaults {
+export default {
   components: {
 
   },
@@ -32,7 +32,7 @@ export defaults {
 
   },
 
-  methods () {
+  methods: {
 
   }
 }

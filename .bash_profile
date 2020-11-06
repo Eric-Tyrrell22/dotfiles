@@ -27,6 +27,7 @@ alias t='(tmux has-session 2>/dev/null && tmux attach) || (tmux new-session)'
 # git helpers
 alias g="git"
 alias gg="git grep"
+alias gs="git status" # I'll rue the day I require ghost script.  
 alias gd="cd '$(git rev-parse --show-toplevel)'"
 
 # tools
