@@ -58,6 +58,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'mileszs/ack.vim'
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
