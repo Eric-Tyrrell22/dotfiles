@@ -64,5 +64,5 @@ extract () {
 
 gb () {
   NUM="${1:-10}"
-  git branch --sort=committerdate | head -n $NUM
+  git branch --sort=-committerdate | head -n $NUM
 }
