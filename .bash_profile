@@ -28,7 +28,7 @@ alias t='(tmux has-session 2>/dev/null && tmux attach) || (tmux new-session)'
 alias g="git"
 alias gg="git grep"
 alias gs="git status" # I'll rue the day I require ghost script.  
-alias gd="cd '$(git rev-parse --show-toplevel)'"
+alias gd='cd "$(git rev-parse --show-toplevel)"'
 
 # tools
 alias grep="grep --color"
@@ -60,4 +60,9 @@ extract () {
   else
       echo "'$1' is not a valid file!"
   fi
+}
+
+gb () {
+  NUM="${1:-10}"
+  git branch --sort=committerdate | head -n $NUM
 }
