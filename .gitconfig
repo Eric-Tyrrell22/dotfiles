@@ -1,6 +1,8 @@
 [user]
 	name = Eric tyrrell
 	email = eric.tyrrell@minim.co
+[core]
+  editor = "vim"
 [alias]
   a = add
   b = branch
