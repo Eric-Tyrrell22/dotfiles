@@ -15,7 +15,6 @@ alias ....="cd ../../../"
 alias .....="cd ../../../../"
 
 # alias typos I frequently encounter
-alias dc="cd" #dc is apparently a calculator
 alias cdc="cd"
 
 alias sl="ls"
@@ -29,6 +28,11 @@ alias g="git"
 alias gg="git grep"
 alias gs="git status" # I'll rue the day I require ghost script.  
 alias gd='cd "$(git rev-parse --show-toplevel)"'
+
+#docker-compose helpers
+alias dc="docker-compose"
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
 
 # tools
 alias grep="grep --color"
