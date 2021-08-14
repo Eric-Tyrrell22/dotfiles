@@ -59,6 +59,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'mileszs/ack.vim'
 Plug 'hashivim/vim-terraform'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
