@@ -47,6 +47,8 @@ if has("autocmd")
   augroup end
 endif
 
+let g:coc_config_home = "~/.vim/coc-settings"
+
 " Plguins
 " Download vim plug if not there already
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -55,11 +57,27 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+"CoC auto
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <TAB>
+		  \ pumvisible() ? "\<C-n>" :
+		  \ <SID>check_back_space() ? "\<TAB>" :
+		  \ coc#refresh()
+
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+let g:coc_global_extensions = ['coc-solargraph']
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'mileszs/ack.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 

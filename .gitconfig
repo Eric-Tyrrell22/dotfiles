@@ -3,6 +3,7 @@
 	email = eric.tyrrell@minim.co
 [core]
   editor = "vim"
+  excludesfile = "~/.gitignore"
 [alias]
   a = add
   b = branch

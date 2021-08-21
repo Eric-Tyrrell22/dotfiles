@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FILES=".bash_profile .vimrc .gitconfig"
+FILES=".bash_profile .vimrc .gitconfig gitignore"
 FORCE=0
 time=$(date +%s)
 
@@ -28,6 +28,8 @@ done
 #Add vim templates
 mkdir -p ~/.vim/templates 2>/dev/null
 cp ./vim/templates/* ~/.vim/templates/
+
+mv ~/gitignore ~/.gitignore
 
 # TODO: I don't think this currently works.
 # it might be sourcing the bqash profile for the process running the script
