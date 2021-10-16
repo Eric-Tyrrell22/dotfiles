@@ -35,3 +35,4 @@ mv ~/gitignore ~/.gitignore
 # it might be sourcing the bqash profile for the process running the script
 # Leaving for now because it makes it easier to debug 
 source ~/.bash_profile
+echo "This output is here only to make you think something happened"
