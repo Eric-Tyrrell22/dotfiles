@@ -72,11 +72,6 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 let g:coc_global_extensions = ['coc-solargraph']
 
-autocmd hi PmenuSel ctermfg=white ctermbg=DarkGreen
-autocmd hi Pmenu ctermfg=black ctermbg=DarkGreen
-
-
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'mileszs/ack.vim'
