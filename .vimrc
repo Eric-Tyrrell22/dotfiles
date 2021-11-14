@@ -80,6 +80,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Allows changing pairs of brackets easily using cs)]
 Plug 'tpope/vim-surround'
+" like f but specifies 2 letters instead. increases accuracy
+Plug 'justinmk/vim-sneak'
 
 call plug#end()
 

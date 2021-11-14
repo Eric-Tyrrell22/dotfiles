@@ -30,6 +30,12 @@ alias gg="git grep"
 alias gs="git status" # I'll rue the day I require ghost script.  
 alias gd='cd "$(git rev-parse --show-toplevel)"'
 
+#kubectl
+alias kk='kubectl'
+alias kkgc='kk config get-contexts'
+alias kkuc='kk config use-context'
+setns () { kk config set-context --current --namespace="$@"; }
+
 #docker-compose helpers
 alias dc="docker-compose"
 alias dcu="docker-compose up"
@@ -71,3 +77,5 @@ gb () {
   NUM="${1:-10}"
   git branch --sort=-committerdate | head -n $NUM
 }
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+. "$HOME/.cargo/env"
