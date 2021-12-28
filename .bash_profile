@@ -45,6 +45,7 @@ alias dcd="docker-compose down"
 alias grep="grep --color"
 
 eval "$(rbenv init -)"
+eval "$(fnm env --use-on-cd)"
 
 cd () {
 	builtin cd $1
