@@ -29,6 +29,10 @@ set autoindent
 
 set noerrorbells
 
+" set swapfiles
+" https://stackoverflow.com/a/21026618
+set directory=$HOME/.vim/swapfiles//
+
 " messing with the path
 set path+=**
 let gitpath=system("git rev-parse --show-toplevel")
@@ -82,8 +86,17 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
 " like f but specifies 2 letters instead. increases accuracy
 Plug 'justinmk/vim-sneak'
+Plug 'pangloss/vim-javascript'
+Plug 'dense-analysis/ale'
 
 call plug#end()
+
+" ale
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+
+let b:ale_linter_aliases = ['javascript', 'vue']
+let b:ale_linters = ['eslint', 'vls']
 
 " mappings
 

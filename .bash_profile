@@ -45,8 +45,6 @@ alias dcd="docker-compose down"
 # tools
 alias grep="grep --color"
 
-eval "$(rbenv init -)"
-eval "$(fnm env --use-on-cd)"
 
 cd () {
 	builtin cd $1
@@ -79,5 +77,13 @@ gb () {
   NUM="${1:-10}"
   git branch --sort=-committerdate | head -n $NUM
 }
+
+# needs to be created for vim
+# only needs to run once per machine, but putting in bash
+# profile because it's easier
+mkdir -p $HOME/.vim/swapfiles
+# Run at shell start
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 . "$HOME/.cargo/env"
+eval "$(rbenv init -)"
+eval "$(fnm env --use-on-cd)"
