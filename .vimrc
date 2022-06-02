@@ -86,6 +86,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
 " like f but specifies 2 letters instead. increases accuracy
 Plug 'justinmk/vim-sneak'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'dense-analysis/ale'
 
