@@ -10,10 +10,6 @@ export default {
 
   },
 
-  mixins: {
-
-  },
-
   props: {
 
   },
@@ -28,7 +24,7 @@ export default {
 
   },
 
-  mounted (){
+  mounted() {
 
   },
 
@@ -38,5 +34,5 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 </style>
