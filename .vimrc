@@ -47,7 +47,7 @@ if has("autocmd")
   " autoload template files
   augroup templates
     autocmd BufNewFile *.vue 0r ~/.vim/templates/skeleton.vue
-    autocmd BufNewFile *.vue 0r ~/.vim/templates/skeleton.sh
+    autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
   augroup end
 endif
 
