@@ -26,7 +26,7 @@ do
 done
 
 #Add vim templates
-mkdir -p ~/.vim/templates 2>/dev/null
+mkdir -p ~/.vim/templates 2> /dev/null
 cp ./vim/templates/* ~/.vim/templates/
 
 mv ~/gitignore ~/.gitignore
