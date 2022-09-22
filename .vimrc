@@ -79,13 +79,9 @@ let g:coc_global_extensions = ['coc-solargraph']
 call plug#begin('~/.vim/plugged')
 
 Plug 'mileszs/ack.vim'
-Plug 'hashivim/vim-terraform'
-Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Allows changing pairs of brackets easily using cs)]
 Plug 'tpope/vim-surround'
-" like f but specifies 2 letters instead. increases accuracy
-Plug 'justinmk/vim-sneak'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'pangloss/vim-javascript'
@@ -96,6 +92,10 @@ call plug#end()
 " ale
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
+
+let g:ale_fixers = { 'javascript': ['eslint'] }
+
+let g:ale_fix_on_save = 1
 
 let b:ale_linter_aliases = ['javascript', 'vue']
 let b:ale_linters = ['eslint', 'vls']

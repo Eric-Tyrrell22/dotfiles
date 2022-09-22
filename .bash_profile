@@ -29,7 +29,7 @@ alias g="git"
 alias gg="git grep"
 alias gs="git status" # I'll rue the day I require ghost script.  
 alias gd='cd "$(git rev-parse --show-toplevel)"'
-alias f='git ci --fixup=$(git rev-parse HEAD)'
+alias f='git ci --fixup=$(git log --grep "fixup" --invert-grep -n 1 --format="%H")'
 
 #kubectl
 alias kk='kubectl'
