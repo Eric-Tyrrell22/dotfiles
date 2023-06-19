@@ -45,6 +45,9 @@ alias dcd="docker-compose down"
 # tools
 alias grep="grep --color"
 
+# avoids confusion of fresh installs
+alias vi='vim'
+
 
 cd () {
 	builtin cd $1
@@ -82,8 +85,17 @@ gb () {
 # only needs to run once per machine, but putting in bash
 # profile because it's easier
 mkdir -p $HOME/.vim/swapfiles
+
 # Run at shell start
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+# Rust
 . "$HOME/.cargo/env"
+
+# Ruby
 eval "$(rbenv init -)"
+
+# Node
+export PATH="/home/eric/.local/share/fnm:$PATH"
+eval "`fnm env`"
 eval "$(fnm env --use-on-cd)"
