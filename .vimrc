@@ -72,7 +72,8 @@ inoremap <silent><expr> <TAB>
 		  \ <SID>check_back_space() ? "\<TAB>" :
 		  \ coc#refresh()
 
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 let g:coc_global_extensions = ['coc-solargraph']
 
