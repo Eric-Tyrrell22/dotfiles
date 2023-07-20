@@ -21,6 +21,13 @@ alias gg="git grep"
 alias gs="git status" # I'll rue the day I require ghost script.  
 alias gd='cd "$(git rev-parse --show-toplevel)"'
 alias f='git ci --fixup=$(git log --grep "fixup" --invert-grep -n 1 --format="%H")'
+squash() {
+  # Find the first non-fixup commit
+  REV=$(git log --grep="^[^fixup!]" --pretty=format:"%h" | head -n 1)
+
+  # Make a squash commit and start the interactive rebase
+  git rebase -i --autosquash $REV^
+}
 
 #kubectl
 alias kk='kubectl'
