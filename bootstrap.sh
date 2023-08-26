@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FILES=".bash_profile .bash_aliases .bashrc .vimrc .gitconfig gitignore"
+FILES=".bash_profile .bash_aliases .bashrc .vimrc .gitconfig gitignore .tmux.conf"
 FORCE=0
 time=$(date +%s)
 
