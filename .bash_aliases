@@ -36,6 +36,7 @@ alias kkuc='kk config use-context'
 setns () { kk config set-context --current --namespace="$@"; }
 
 #docker-compose helpers
+alias docker-compose="docker compose"
 alias dc="docker-compose"
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
