@@ -106,3 +106,10 @@ let b:ale_linters = ['eslint', 'vls']
 inoremap jj <Esc>
 nnoremap ; :
 nnoremap : ;
+
+# pane management
+nnoremap <C-w>s <C-w>s<C-w>w
+nnoremap <C-w>v <C-w>v<C-w>w
+
+# paste management
+nnoremap <C-S-v> :set paste<CR>o<Esc>"*p:set nopaste<CR>
