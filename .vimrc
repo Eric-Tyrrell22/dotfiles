@@ -2,6 +2,8 @@ set nocompatible
 
 syntax on
 filetype plugin on
+filetype plugin indent on
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 set ttyfast
 set number
@@ -98,8 +100,13 @@ let g:ale_fixers = { 'javascript': ['eslint'] }
 
 let g:ale_fix_on_save = 1
 
-let b:ale_linter_aliases = ['javascript', 'vue']
-let b:ale_linters = ['eslint', 'vls']
+let g:ale_linters = {
+\   'yaml': ['yamllint'],
+\   'javascript': ['eslint'],
+\   'javascript.jsx': ['eslint'],
+\   'typescript': ['eslint'],
+\   'typescript.tsx': ['eslint']
+\}
 
 " mappings
 
