@@ -114,9 +114,9 @@ inoremap jj <Esc>
 nnoremap ; :
 nnoremap : ;
 
-# pane management
+" pane management
 nnoremap <C-w>s <C-w>s<C-w>w
 nnoremap <C-w>v <C-w>v<C-w>w
 
-# paste management
+" paste management
 nnoremap <C-S-v> :set paste<CR>o<Esc>"*p:set nopaste<CR>
