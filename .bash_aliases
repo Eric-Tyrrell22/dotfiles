@@ -29,7 +29,6 @@ squash() {
   git rebase -i --autosquash $REV^
 }
 
-#kubectl
 alias kk='kubectl'
 alias kkgc='kk config get-contexts'
 alias kkuc='kk config use-context'
@@ -51,3 +50,5 @@ cd () {
 	builtin cd $1
 	ls -ltr
 }
+
+alias tf="terraform"
