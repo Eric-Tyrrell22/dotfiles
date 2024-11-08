@@ -60,8 +60,7 @@ eval "$(rbenv init -)"
 
 # Node
 export PATH="/home/eric/.local/share/fnm:$PATH"
-eval "`fnm env`"
-eval "$(fnm env --use-on-cd)"
+eval "$(fnm env --use-on-cd --shell bash)"
 
 # go
 export PATH="/home/eric/go/bin:$PATH"
