@@ -1,0 +1,61 @@
+[bell]
+duration = 0
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[font]
+size = 22
+
+[font.normal]
+family = "JetBrains Mono"
+style = "Regular"
+
+[font.bold]
+family = "JetBrains Mono"
+style = "Bold"
+
+[font.italic]
+family = "JetBrains Mono"
+style = "Italic"
+
+[font.offset]
+x = 0
+y = 1
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[general]
+import = ["~/.config/alacritty/rose-pine-moon.toml"]
+
+[[keyboard.bindings]]
+key = "Equals"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Key0"
+mods = "Control"
+action = "ResetFontSize"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window.padding]
+x = 12
+y = 12
+
+[window]
+dynamic_padding = true
+decorations = "full"
+startup_mode = "Maximized"
+
