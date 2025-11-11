@@ -101,6 +101,12 @@ call plug#end()
 " Set Rose Pine colorscheme
 colorscheme rosepine
 
+" Improve contrast for completion popup menu
+highlight Pmenu ctermbg=238 ctermfg=255 guibg=#3a3a3a guifg=#ffffff
+highlight PmenuSel ctermbg=24 ctermfg=255 guibg=#005f87 guifg=#ffffff
+highlight PmenuSbar ctermbg=240 guibg=#585858
+highlight PmenuThumb ctermbg=248 guifg=#a8a8a8
+
 " ale
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
